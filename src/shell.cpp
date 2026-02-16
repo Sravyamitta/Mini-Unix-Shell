@@ -35,6 +35,7 @@ vector<char*> toCharArray(vector<string> &args) {
 
 // Handle Ctrl+C in parent shell
 void handleSigInt(int sig) {
+    (void)sig;
     const char* msg = "\n";
     write(STDOUT_FILENO, msg, strlen(msg));
 }
